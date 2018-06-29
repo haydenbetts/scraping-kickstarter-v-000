@@ -9,7 +9,7 @@ def create_project_hash
   kickstarter = Nokogiri::HTML(html)
 
   project_node = kickstarter.css(".project-card")
-
+  binding.pry
 end
 
 def get_project_name(xml_nodes)
