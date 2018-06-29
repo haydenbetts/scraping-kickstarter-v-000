@@ -3,6 +3,7 @@
 # scraping steps: get, make, print
 # create cmobines get and make
 require 'nokogiri'
+require 'pry'
 
 def create_project_hash
   html = File.read('fixtures/kickstarter.html')
@@ -18,3 +19,5 @@ end
 
 def get_project_props
 end
+
+create_project_hash
