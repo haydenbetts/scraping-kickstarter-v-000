@@ -12,8 +12,14 @@ def create_project_hash
 
   project_nodes = kickstarter.css(".project-card")
   project_nodes.collect do |project|
-    name = project.css(".bbcard_name").css("a").text
-
+    {
+      project.css(".bbcard_name").css("a").text => {
+        :image_link => project.css(".project-thumbnail img").attr("src").value,
+        :description => ,
+        :location => ,
+        :percent_funded ,
+      }
+    }
   end
 end
 
