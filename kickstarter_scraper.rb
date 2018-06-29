@@ -10,4 +10,9 @@ def create_project_hash
 
 end
 
-def 
+def get_project_name(xml_nodes)
+  
+end
+
+def get_project_props
+end
