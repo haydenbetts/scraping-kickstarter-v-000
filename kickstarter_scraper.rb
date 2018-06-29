@@ -11,8 +11,9 @@ def create_project_hash
   :projects => {}
 
   project_nodes = kickstarter.css(".project-card")
-  project_nodes.each do |project|
+  project_nodes.collect do |project|
     name = project.css(".bbcard_name").css("a").text
+
   end
 end
 
