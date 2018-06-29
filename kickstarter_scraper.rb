@@ -8,10 +8,9 @@ require 'pry'
 def create_project_hash
   html = File.read('fixtures/kickstarter.html')
   kickstarter = Nokogiri::HTML(html)
-  :projects = {}
 
   project_nodes = kickstarter.css(".project-card")
-  :projects => project_nodes.collect do |project|
+  project_nodes.collect do |project|
     {
       project.css(".bbcard_name").css("a").text => {
         :image_link => project.css(".project-thumbnail img").attr("src").value,
