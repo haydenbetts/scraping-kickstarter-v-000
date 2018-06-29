@@ -18,8 +18,7 @@ def create_project_hash
         :location => project.css(".location-name").text,
         :percent_funded => project.css(".first.funded strong").text
       }
-    end
-  end
+      end
   binding.pry
 
 
