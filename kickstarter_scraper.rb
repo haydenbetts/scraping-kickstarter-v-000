@@ -21,6 +21,7 @@ def create_project_hash
       }
     }
   end
+  binding.pry
 end
 
 def get_project_name(xml_nodes)
