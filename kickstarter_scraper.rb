@@ -20,6 +20,7 @@ def create_project_hash
         :percent_funded => project.css(".first.funded strong").text
       }
     end
+    binding.pry
 end
 
 def get_project_name(xml_nodes)
