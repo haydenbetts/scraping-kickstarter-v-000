@@ -16,7 +16,7 @@ def create_project_hash
       project.css(".bbcard_name").css("a").text => {
         :image_link => project.css(".project-thumbnail img").attr("src").value,
         :description => project.css(".bbcard_blurb").text,
-        :location => ,
+        :location => project.css(".location-name").text,
         :percent_funded ,
       }
     }
