@@ -8,7 +8,7 @@ require 'pry'
 def create_project_hash
   html = File.read('fixtures/kickstarter.html')
   kickstarter = Nokogiri::HTML(html)
-  :projects => {}
+  :projects = {}
 
   project_nodes = kickstarter.css(".project-card")
   projects = project_nodes.collect do |project|
