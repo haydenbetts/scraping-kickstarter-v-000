@@ -11,7 +11,7 @@ def create_project_hash
   :projects => {}
 
   project_nodes = kickstarter.css(".project-card")
-  project_nodes.collect do |project|
+  projects = project_nodes.collect do |project|
     {
       project.css(".bbcard_name").css("a").text => {
         :image_link => project.css(".project-thumbnail img").attr("src").value,
