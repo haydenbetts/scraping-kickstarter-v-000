@@ -10,7 +10,7 @@ def create_project_hash
   kickstarter = Nokogiri::HTML(html)
 
   project_nodes = kickstarter.css(".project-card")
-  projects = project_nodes.collect do |project|
+  project_nodes.collect do |project|
     {
       project.css(".bbcard_name").css("a").text => {
         :image_link => project.css(".project-thumbnail img").attr("src").value,
@@ -20,7 +20,7 @@ def create_project_hash
       }
     }
   end
-  binding.pry
+  
 end
 
 def get_project_name(xml_nodes)
