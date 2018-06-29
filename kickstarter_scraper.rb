@@ -12,14 +12,14 @@ def create_project_hash
 
   projects = Hash.new
   project_nodes.each do |project|
-    :projects[project.css(".bbcard_name").css("a").text] => {
+    projects[project.css(".bbcard_name").css("a").text] => {
         :image_link => project.css(".project-thumbnail img").attr("src").value,
         :description => project.css(".bbcard_blurb").text,
         :location => project.css(".location-name").text,
         :percent_funded => project.css(".first.funded strong").text
       }
   end
-
+  binding.pry
 
 
 end
