@@ -9,11 +9,11 @@ def create_project_hash
   html = File.read('fixtures/kickstarter.html')
   kickstarter = Nokogiri::HTML(html)
 
-  project_node = kickstarter.css(".project-card")
+  project_nodes = kickstarter.css(".project-card")
   project_nodes.each do |project|
+    binding.pry
     project.css(".bbcard_name").text
   end
-  binding.pry
 end
 
 def get_project_name(xml_nodes)
