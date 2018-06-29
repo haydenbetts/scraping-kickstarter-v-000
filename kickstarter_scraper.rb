@@ -13,7 +13,7 @@ def create_project_hash
   projects = Hash.new
   project_nodes.each do |project|
     title = project.css(".bbcard_name").css("a").text
-    projects[] => {
+    projects[title] = {
         :image_link => project.css(".project-thumbnail img").attr("src").value,
         :description => project.css(".bbcard_blurb").text,
         :location => project.css(".location-name").text,
